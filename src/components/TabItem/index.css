@@ -1,0 +1,25 @@
+.tab {
+  margin: 10px;
+}
+
+.tab_button {
+  color: #ffffff;
+  font-size: 17px;
+  font-family: 'Roboto';
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.active_tab {
+  color: #fec653;
+  border-bottom: 2px solid #fec653;
+}
+
+@media screen and (min-width: 768px) {
+  .tab_button {
+    font-size: 20px;
+  }
+}
