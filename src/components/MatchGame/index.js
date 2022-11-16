@@ -281,8 +281,7 @@ class MatchGame extends Component {
     const {displayImage} = this.state
     if (displayImage.id === id)
       return this.setState(prevState => ({
-        displayImage:
-          imagesList[Math.floor(Math.random() * imagesList.length - 1)],
+        displayImage: imagesList[Math.floor(Math.random() * imagesList.length)],
         score: prevState.score + 1,
       }))
     clearInterval(this.timerId)
@@ -322,7 +321,9 @@ class MatchGame extends Component {
           </div>
           <ul className="navbar_list_container">
             <li className="score_container">
-              <p className="navbar_item">Score: {score}</p>
+              <p className="navbar_item">
+                Score:<span className="score_time_count"> {score}</span>
+              </p>
             </li>
             <li className="timer_image_and_count_container">
               <img
